@@ -23,18 +23,14 @@ spring:
         password: 123456789
   
     jpa:
+        database: mariadb
+        database-platform: org.hibernate.dialect.mariadb
         hibernate: 
         # create, create-drop, update, none
-        ddl-auto: create
+            ddl-auto: create
         # 콘솔출력
         show-sql: true     
-        properties:
-        hibernate:
-            # h2
-            # dialect: org.hibernate.dialect.H2Dialect
-            # mariadb
-            dialect: org.hibernate.dialect.MariaDBDialect
-            format_sql: true
+        
     data:
         redis:
         host: localhost
