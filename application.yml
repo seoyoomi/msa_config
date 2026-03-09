@@ -24,7 +24,7 @@ spring:
   
     jpa:
         database: mysql
-        database-platform: org.hibernate.dialect.mariadbDialect
+        database-platform: org.hibernate.dialect.MariaDBDialect
         hibernate: 
         # create, create-drop, update, none
             ddl-auto: create
