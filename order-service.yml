@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    kafka-server: localhost:9092
+
+# Feign + circuitBreaker 활성화
+feign:
+  circuitbreaker:
+    enabled: true
+
+# Feign + circuitBreaker 트렌젝션 처리
+resilience4j:
+  circuitbreaker:
+    instances:
+      productService:
+        failure-rate-threshold: 40
+        wait-duration-in-open-state: 10s
